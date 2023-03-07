@@ -1,0 +1,31 @@
+%df {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin display-flex($font-color: black, $justify-content: space-evenly, $font-weight: 600) {
+    color: $font-color;
+    font-weight: $font-weight;
+    @extend %df;
+    justify-content: $justify-content ;
+}
+
+@mixin font-size($font-color: $color, $font-weight: 600, $font-size: 1em, $text-align: center) {
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+    text-align: $text-align;
+}
+
+%hover {
+    box-shadow: 4px 4px 4px 4px black, 6px 6px 4px 4px black;
+}
+
+
+@mixin display($display: flex, $flex-dire: column, $justify-content: center, $align-items: center) {
+    display: $display;
+    justify-content: $justify-content;
+    flex-direction: $flex-dire;
+    align-items: $align-items;
+}
